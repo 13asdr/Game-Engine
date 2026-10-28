@@ -1,8 +1,9 @@
-# C++ 游戏引擎
+# C++ Game Engine
 
 从零实现的简单 C++ 游戏引擎。当前进度：**里程碑 1 —— 窗口 + 清屏**。
 
-项目协作规则见 [AI_PROJECT_RULES.md](AI_PROJECT_RULES.md)。
+- 仓库：<https://github.com/13asdr/Game-Engine>
+- 项目协作规则见 [AI_PROJECT_RULES.md](AI_PROJECT_RULES.md)。
 
 ## 技术栈
 

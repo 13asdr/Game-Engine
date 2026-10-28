@@ -23,7 +23,7 @@ void printRendererInfo() {
 }  // namespace
 
 int main() {
-    Window window(kWindowWidth, kWindowHeight, "Engine - milestone 1");
+    Window window(kWindowWidth, kWindowHeight, "C++ Game Engine - milestone 1");
     if (!window.valid()) {
         std::fprintf(stderr, "[main] window creation failed, abort\n");
         return 1;
