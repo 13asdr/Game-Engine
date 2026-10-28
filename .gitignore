@@ -1,0 +1,27 @@
+# ---- xmake 构建产物 ----
+build/
+.xmake/
+
+# 注意：xmake-requires.lock 是依赖锁文件，必须提交进版本库，不要加进这里。
+
+# ---- IDE ----
+.vs/
+.vscode/*
+!.vscode/settings.json
+*.user
+*.suo
+CMakeSettings.json
+
+# ---- 编译中间产物 ----
+*.obj
+*.o
+*.pdb
+*.ilk
+*.exp
+*.lib
+*.dll
+
+# ---- 系统垃圾 ----
+Thumbs.db
+Desktop.ini
+.DS_Store
