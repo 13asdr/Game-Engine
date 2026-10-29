@@ -67,13 +67,15 @@ xmake f --toolchain=mingw
 
 ## 本机实测结果
 
-> 由你运行后填写，作为「这台机器能跑 OpenGL 4.5」的凭据。
+> 2026-10-29 实测，作为「这台机器能跑 OpenGL 4.5 Core」的凭据。
 
 ```
-GL_VERSION  = 待填
-GL_RENDERER = 待填
-GL_VENDOR   = 待填
+GL_VERSION  = 4.5.0 NVIDIA 592.82
+GL_RENDERER = NVIDIA GeForce RTX 4060 Laptop GPU/PCIe/SSE2
+GL_VENDOR   = NVIDIA Corporation
 ```
+
+结论：拿到 4.5 Core 上下文，硬件直通（非软件渲染），里程碑 1 验收 6 条全部通过。
 
 ## 目录结构
 
