@@ -11,8 +11,11 @@ set_warnings("all", "extra")
 set_policy("package.requires_lock", true)
 
 -- 从 xmake-repo 拉 GLFW 源码，按当前工具链现场编译。
+-- glfw_include = "system" 很关键：xmake 的 glfw 包默认 glfw_include="none"，
+-- 会给使用方定义 GLFW_INCLUDE_NONE，导致 glfw3.h 不包含 <GL/gl.h>，
+-- glClear/glClearColor 这些 OpenGL 1.1 函数就找不到声明。改成 system 才走默认包含。
 -- 逃生通道：xrepo 拉不到时改成 add_requires("vcpkg::glfw3", {alias = "glfw"})
-add_requires("glfw 3.4")
+add_requires("glfw 3.4", {configs = {glfw_include = "system"}})
 
 target("engine")
     set_kind("binary")
