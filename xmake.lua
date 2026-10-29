@@ -16,6 +16,11 @@ add_requires("glfw 3.4")
 
 target("engine")
     set_kind("binary")
+
+    -- 中文 Windows 上 MSVC 默认按代码页 936(GBK) 读源码，UTF-8 中文注释会吞掉行尾换行，
+    -- 导致整份文件解析错位（C4819 + 一堆莫名语法错误）。这条让 MSVC 生成 /utf-8。
+    set_encodings("utf-8")
+
     add_files("src/**.cpp")
     add_includedirs("src")
     add_packages("glfw")
