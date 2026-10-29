@@ -11,7 +11,7 @@
             },
             version = "4.3.4"
         },
-        ["glfw 3.4#f56260b5"] = {
+        ["glfw 3.4#9f14f03c"] = {
             repo = {
                 branch = "master",
                 commit = "cf09fff02b4e75ef73083cc9e0e14963f78141ac",

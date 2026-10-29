@@ -6,9 +6,9 @@ add_rules("mode.debug", "mode.release")
 set_languages("c++17")
 set_warnings("all", "extra")
 
--- 生成 xmake-requires.lock，把依赖版本钉死（类似 Cargo.lock）。
+-- 生成 xmake-requires.lock，把依赖版本钉死(包依赖锁定)（类似 Cargo.lock）。
 -- 该文件必须提交进 git，否则依赖会随时间漂移。
-set_policy("package.requires_lock", true)
+set_policy("package.requires_lock", true)  
 
 -- 从 xmake-repo 拉 GLFW 源码，按当前工具链现场编译。
 -- glfw_include = "system" 很关键：xmake 的 glfw 包默认 glfw_include="none"，
